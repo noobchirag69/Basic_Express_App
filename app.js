@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('views'));
 
 // Listening for requests on Port 3000
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 // Sending the Index page
 app.get('/', (req, res) => {
